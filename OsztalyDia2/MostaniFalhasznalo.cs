@@ -12,5 +12,19 @@ namespace OsztalyDia2
 
         }
 
+        public static void TerhelesSzam()
+        {
+
+
+
+        }
+        public static void ErdekSzam()
+        {
+
+
+
+
+        }
+
     }
 }

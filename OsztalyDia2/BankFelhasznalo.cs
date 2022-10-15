@@ -9,8 +9,8 @@ namespace OsztalyDia2
     public abstract class BankFelhasznalo
     {
 
-        public int felhasznaloszama;
-        public int osszeg;
+        private int felhasznaloszama;
+        private int osszeg;
 
         public BankFelhasznalo(int felhasznaloszama, int osszeg)
         {
@@ -23,6 +23,18 @@ namespace OsztalyDia2
 
             Console.WriteLine(string.Format("Felhasználó Száma: {0}", this.felhasznaloszama));
             Console.WriteLine(string.Format("Felhasználó Összege: {0:# ### ###}", this.osszeg));
+
+        }
+        public static void Osszegvissza()
+        {
+
+
+
+        }
+        public static void Osszegfrissit()
+        {
+
+
 
         }
 
