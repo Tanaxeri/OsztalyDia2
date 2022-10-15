@@ -3,38 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace OsztalyDia2
 {
     public abstract class BankFelhasznalo
     {
 
-        private int felhasznaloszama;
-        private int osszeg;
+        private string felhasznaloszama;
+        private decimal osszeg;
 
-        public BankFelhasznalo(int felhasznaloszama, int osszeg)
-        {
-            this.felhasznaloszama = felhasznaloszama;
-            this.osszeg = osszeg;
-        }
+        
 
-        public virtual void Nev()
+        public decimal Osszegvissza()
         {
 
-            Console.WriteLine(string.Format("Felhasználó Száma: {0}", this.felhasznaloszama));
-            Console.WriteLine(string.Format("Felhasználó Összege: {0:# ### ###}", this.osszeg));
+            return osszeg;
 
         }
-        public static void Osszegvissza()
+        public void Osszegfrissit(decimal ossz)
         {
 
-
-
-        }
-        public static void Osszegfrissit()
-        {
-
-
+            osszeg += ossz;
 
         }
 

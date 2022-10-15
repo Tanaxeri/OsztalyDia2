@@ -13,13 +13,17 @@ namespace OsztalyDia2
 
             Console.WriteLine("\nA Program kezdődik...");
 
-            MostaniFalhasznalo mostanifelhasznalo1 = new MostaniFalhasznalo(3, 120000);
+            MostaniFalhasznalo mostanifelhasznalo1 = new MostaniFalhasznalo();
             Console.WriteLine("\nMostani Felhasználó");
-            mostanifelhasznalo1.Nev();
+            mostanifelhasznalo1.Osszegfrissit(300000);
+            Console.WriteLine(mostanifelhasznalo1.Osszegvissza());
 
-            FelretettFelhasznalo felretettfelhasznalo1 = new FelretettFelhasznalo(3, 1000000);
+
+            FelretettFelhasznalo felretettfelhasznalo1 = new FelretettFelhasznalo();
             Console.WriteLine("\nFélretett Felhasználó");
-            felretettfelhasznalo1.Nev();
+            felretettfelhasznalo1.Osszegfrissit(120000);
+            felretettfelhasznalo1.Osszegfrissit(1200000);
+            Console.WriteLine(felretettfelhasznalo1.Osszegvissza());
 
             Console.WriteLine("\nA Program vége!");
             Console.ReadKey();

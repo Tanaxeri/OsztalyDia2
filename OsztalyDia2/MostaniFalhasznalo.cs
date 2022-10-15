@@ -5,24 +5,18 @@ namespace OsztalyDia2
 {
     public class MostaniFalhasznalo : BankFelhasznalo
     {
-        public MostaniFalhasznalo(int felhasznaloszama, int osszeg) : base(felhasznaloszama, osszeg)
+        private double terheles = 1.5;
+
+        public void TerhelesSzam()
         {
 
-
+            base.Osszegfrissit((decimal)((double)base.Osszegvissza() * this.terheles));
 
         }
-
-        public static void TerhelesSzam()
+        public decimal ErdekSzam()
         {
 
-
-
-        }
-        public static void ErdekSzam()
-        {
-
-
-
+            return base.Osszegvissza();
 
         }
 
